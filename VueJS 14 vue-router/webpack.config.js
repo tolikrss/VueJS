@@ -1,30 +1,31 @@
+var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './main.js',
+  entry: './src/main.js',
   output: {
-    path: '/',
-    publicPath: '/',
-    filename: 'build.js'
+    path: path.join(__dirname, './build'),
+    publicPath: '/build/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true
   },
   module: {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
-        test: /\.html$/,
-        loader: 'vue-html'
-      },
-      {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]?[hash]'
         }
@@ -32,24 +33,22 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.LoaderOptionsPlugin({
+      vue: {
+        loaders: {
+          sass: 'vue-style-loader!css-loader!sass?indentedSyntax'
+        }
+      }
+    })
   ],
-  // https://github.com/vuejs/vue-loader/issues/9
-  vue: {
-    loaders: {
-      sass: 'vue-style-loader!css-loader!sass?indentedSyntax'
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js'
     }
-  },
-  devServer: {
-    hot: true,
-    stats: 'errors-only',
-    clientLogLevel: 'error'
   }
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
@@ -61,6 +60,6 @@ if (process.env.NODE_ENV === 'production') {
         warnings: false
       }
     }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin()
   ])
 }
