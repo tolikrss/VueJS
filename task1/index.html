@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/4613b863e5.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="model1">
+            <model1 :expirience="expirience" :languages="languages" :educations="educations" @filter-changed="filterChange"></model1>
+            <!--
+            <button @click="log" class="test-button">Тест (состояние данных в экземпляре)</button>
+            -->
+            <div class="model2">
+                <model2 :expirience="expirience" :languages="languages" :educations="educations"></model2>
+            </div>
+        </div>
+
+
+        <div class="model3">
+            <model3 :expirience="expirience" :languages="languages" :educations="educations"></model3>
+        </div>
+    </div>
+
+    <template id="model1">
+        <button id="ClearAll" @click="ClearAll"><i class="fa fa-minus-circle" aria-hidden="true"></i> Clear All</button>
+        <fieldset>
+            <legend>Expirience</legend>
+            <input class="radio" id="less_1" type="radio" name="gender" value="<1" v-model="expirience" checked >
+            <label for="less_1"><1</label>    
+            <br>
+            <input class="radio" id="more_1" type="radio" name="gender" value=">=1" v-model="expirience">
+            <label for="more_1">>=1</label>      
+            <br>
+            <input class="radio" id="more_5" type="radio" name="gender" value=">5" v-model="expirience">
+            <label for="more_5">>5</label>    
+            <div>Выбрано: {{expirience}}</div>
+        </fieldset>
+        <fieldset>
+            <legend>Language</legend>
+            <div>
+                <input class="checkbox" type="checkbox" id="EN" name="interest" value="EN" v-model="languages" checked >
+                <label for="EN">EN</label>
+            </div>
+            <div>
+                <input class="checkbox" type="checkbox" id="RU" name="interest" value="RU" v-model="languages">
+                <label for="RU">RU</label>
+            </div>
+            <div>
+                <input class="checkbox" type="checkbox" id="UK" name="interest" value="UK" v-model="languages">
+                <label for="UK">UK</label>
+            </div>
+            <span>Выбрано: {{languages}}</span>
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            <div>
+                <input class="checkbox" type="checkbox" id="Student" name="interest" value="Student" v-model="educations" checked>
+                <label for="Student">Student</label>
+            </div>
+            <div>
+                <input class="checkbox" type="checkbox" id="Master" name="interest" value="Master" v-model="educations">
+                <label for="Master">Master</label>
+            </div>
+            <div>
+                <input class="checkbox" type="checkbox" id="Prof" name="interest" value="Prof" v-model="educations">
+                <label for="Prof">Prof</label>
+            </div>
+            <span>Выбрано: {{educations}}</span>
+        </fieldset>
+    </template>
+
+    <template id="model2">
+        <div>
+            Filtered by:
+            <span>
+                expirience:
+                {{expirience}}
+            </span>
+            <span v-if="languages.length !== 0">
+                language:
+                {{languages}}
+            </span>
+            <span v-if="educations.length !== 0">
+                education:
+                {{educations}}
+            </span>
+        </div>
+        <!--
+        <button @click="log">Log model2</button>
+        -->
+    </template>
+    <template id="model3">
+            <ul>
+                    <li class="user" v-for="user in users | filterBy filterExpirience | filterBy filterLanguages | filterBy filterEducations">
+                        <div>
+                            Name: {{ user.name }}
+                        </div>
+                        <div>
+                            Expirience: {{ user.expirience }}
+                        </div>
+                        <div>
+                            Languages: {{ user.languages }}
+                        </div>
+                        <div>
+                            Education: {{ user.education }}
+                        </div>
+                    </li>
+            </ul>
+            <div class="state">
+                Состояние данных в model3:
+                <div>Выбрано: {{expirience}}</div>
+                <div>Выбрано: {{languages}}</div>
+                <div>Выбрано: {{educations}}</div>
+            </div>
+    </template>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
