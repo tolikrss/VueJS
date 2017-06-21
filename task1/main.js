@@ -124,6 +124,12 @@ var childComponent3 = {
                     expirience: 7,
                     languages: ['RU', 'UK', 'EN'],
                     education: ['Master', 'Student']
+                },
+                {
+                    name: 'Bogdan',
+                    expirience: 7,
+                    languages: ['RU', 'UK', 'EN'],
+                    education: ['Master', 'Prof']
                 }
             ]
         }
