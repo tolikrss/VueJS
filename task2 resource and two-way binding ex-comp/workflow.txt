@@ -1,0 +1,8 @@
+http://www.omdbapi.com/?apikey=ff8acd7c&t=Game%20of%20Thrones&Season=1
+
+For webpack assembly - vue-resource adding:
+    npm i vue-resource --save-dev
+then connect plugin in main.js
+    var VueResource = require('vue-resource');
+then register vue-resource in main.js
+    Vue.use(VueResource);
