@@ -49,6 +49,16 @@ var childComponent1 = {
             console.log('model1 expirience chanched');
             console.log(this.expirience);
         },
+        languages: function() {
+            this.$emit('filter-changed', this.expirience, this.languages, this.educations);
+            console.log('model1 languages chanched');
+            console.log(this.languages);
+        },
+        educations: function() {
+            this.$emit('filter-changed', this.expirience, this.languages, this.educations);
+            console.log('model1 educations chanched');
+            console.log(this.educations);
+        }
     },
     methods: {
         clearAll() {
@@ -82,6 +92,9 @@ var childComponent2 = {
 
 var childComponent3 = {
     template: '#model3',
+    components: {
+        model4: childComponent4
+    },
     props: ['expirience', 'languages', 'educations'],
     data: function() {
         return {
@@ -189,6 +202,21 @@ var childComponent3 = {
             }
         }
     }
+}
+
+
+// <!--
+//             <input class="radio" id="{{ID}}" type="radio" name="{{model}}" value="{{value}}" v-model="{{model}}" checked >
+//             <label for="{{ID}}">{{value}}</label>    
+// -->
+var childComponent4 = {
+    template: `
+        
+        <div>Model 4 component</div>
+    `,
+    //props: ['ID', 'model', 'value'],
+    watch: {},
+    methods: {}
 }
 
 new Vue({
