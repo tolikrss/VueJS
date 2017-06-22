@@ -28,16 +28,16 @@
     </div>
 
     <template id="model1">
-        <button id="ClearAll" @click="ClearAll"><i class="fa fa-minus-circle" aria-hidden="true"></i> Clear All</button>
+        <button id="ClearAll" @click="clearAll"><i class="fa fa-minus-circle" aria-hidden="true"></i> Clear All</button>
         <fieldset>
             <legend>Expirience</legend>
-            <input class="radio" id="less_1" type="radio" name="gender" value="<1" v-model="expirience" checked >
+            <input class="radio" id="less_1" type="radio" name="expirience" value="<1" v-model="expirience" checked >
             <label for="less_1"><1</label>    
             <br>
-            <input class="radio" id="more_1" type="radio" name="gender" value=">=1" v-model="expirience">
+            <input class="radio" id="more_1" type="radio" name="expirience" value=">=1" v-model="expirience">
             <label for="more_1">>=1</label>      
             <br>
-            <input class="radio" id="more_5" type="radio" name="gender" value=">5" v-model="expirience">
+            <input class="radio" id="more_5" type="radio" name="expirience" value=">5" v-model="expirience">
             <label for="more_5">>5</label>    
             <div>Выбрано: {{expirience}}</div>
         </fieldset>

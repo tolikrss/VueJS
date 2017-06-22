@@ -48,11 +48,23 @@ var childComponent1 = {
             this.$emit('filter-changed', this.expirience, this.languages, this.educations);
             console.log('model1 expirience chanched');
             console.log(this.expirience);
+        },
+        languages: function() {
+            this.$emit('filter-changed', this.expirience, this.languages, this.educations);
+            console.log('model1 languages chanched');
+            console.log(this.languages);
+        },
+        educations: function() {
+            this.$emit('filter-changed', this.expirience, this.languages, this.educations);
+            console.log('model1 educations chanched');
+            console.log(this.educations);
         }
     },
     methods: {
         clearAll() {
-
+            this.expirience = '<1';
+            this.educations = ['Student'];
+            this.languages = ['EN'];
         }
     }
 }
@@ -130,6 +142,12 @@ var childComponent3 = {
                     expirience: 7,
                     languages: ['RU', 'UK', 'EN'],
                     education: ['Master', 'Prof']
+                },
+                {
+                    name: 'Igor',
+                    expirience: 7,
+                    languages: ['RU', 'UK', 'EN'],
+                    education: ['Master', 'Prof', 'Student']
                 }
             ]
         }
