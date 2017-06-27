@@ -1,0 +1,17 @@
+﻿npm i -g vue-cli //установка cli глобально
+vue init webpack-simple task3 //webpack-simple - название шаблона, task3 - название папки куда установить
+cd task3 // переходим в созданую папку
+npm i // установка зависимостей
+npm run dev //запуск сборки, будет запущен сервер
+// для создания шаблонов - делаем папку template в папке проекта и в ней складываем html шаблоны, переменный в виде {{/message}}
+vue init template/index.html my-project//  template/index.html - адрес темплейта, my-project - имя проекта
+open my-project/index.html //открытие проекта в браузере
+
+//vue-resource
+npm i vue-resource --save-dev // and "import VueResource from 'vue-resource'; Vue.use(VueResource)"
+
+//vue router
+npm i vue-router --save // and "import VueRouter from 'vue-router'; Vue.use(VueRouter)"
+
+//VUEX
+npm i vuex -S
