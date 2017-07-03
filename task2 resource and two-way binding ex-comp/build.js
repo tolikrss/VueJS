@@ -12118,7 +12118,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-576468ae/comp1.vue"
+	  var id = "_v-1cda1dd4/comp1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12470,7 +12470,7 @@
 	                params: {
 	                    apikey: 'ff8acd7c',
 	                    y: 2017,
-	                    s: 'f'
+	                    s: 'dark'
 	                }
 	            };
 	            this.$http.get(this.filmsLink, options).then(function (response) {
@@ -12487,7 +12487,7 @@
 /* 11 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<h1>Comp1 works!</h1>\n<h2>Состояние message в компоненте - {{message}}</h2>\n<input v-model=\"message\"></input>\n<ul class=\"comp1__list\">\n    <li v-for=\"film in films\">\n        <!--\n        <img v-bind:src=\"film.Poster\">\n        -->\n        <div>\n            <div>{{film.Title}}</div>\n            <div>{{film.Type}}</div>\n            <div>{{film.Year}}</div>\n            <div>{{film.imdbID}}</div>\n        </div>\n    </li>\n</ul>\n";
+	module.exports = "\n<h1>Comp1 works!</h1>\n<h2>Состояние message в компоненте - {{message}}</h2>\n<input v-model=\"message\"></input>\n<ul class=\"comp1__list\">\n    <li v-for=\"film in films\">\n        \n        <img v-bind:src=\"film.Poster\">\n        \n        <div>\n            <div>{{film.Title}}</div>\n            <div>{{film.Type}}</div>\n            <div>{{film.Year}}</div>\n            <div>{{film.imdbID}}</div>\n        </div>\n    </li>\n</ul>\n";
 
 /***/ }),
 /* 12 */
@@ -12515,7 +12515,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-574839ac/comp2.vue"
+	  var id = "_v-1cbdeed2/comp2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {

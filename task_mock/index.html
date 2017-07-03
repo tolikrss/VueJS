@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>task3</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="router">
+                <nav>
+                    <router-link v-if="!auth" to="/signup">Sign up</router-link>
+                    <router-link v-if="!auth" to="/login">Log in</router-link>
+                    <button v-if="auth" v-on:click="logOut">Log out</button>
+                </nav>
+            </div>
+        </header>
+
+        <router-view></router-view>
+    </div>
+    <script>
+    </script>
+    <script src="/dist/build.js"></script>
+</body>
+
+</html>

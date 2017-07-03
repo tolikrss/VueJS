@@ -28,14 +28,13 @@
     </div>
 
     <template id="model1">
-        <button id="ClearAll" @click="clearAll"><i class="fa fa-minus-circle" aria-hidden="true"></i> Clear All</button>
-        <fieldset>
+        <button id="Show" @click="show"><i class="fa fa-bars" aria-hidden="true"></i> Show/Hide filters</button>
+        <div class="filters" v-if="isShow">
+            <button id="ClearAll" @click="clearAll"><i class="fa fa-minus-circle" aria-hidden="true"></i> Clear All</button>
+            <fieldset>
             <legend>Expirience</legend>
             <input class="radio" id="less_1" type="radio" name="expirience" value="<1" v-model="expirience" checked >
-            <label for="less_1"><1</label>
-
-            <model4 ></model4>    <!--:ID="less_1" :model="expirience" :value="<1"-->
-                
+            <label for="less_1"><1</label>                
             <br>
             <input class="radio" id="more_1" type="radio" name="expirience" value=">=1" v-model="expirience">
             <label for="more_1">>=1</label>      
@@ -76,6 +75,7 @@
             </div>
             <span>Выбрано: {{educations}}</span>
         </fieldset>
+        </div>
     </template>
 
     <template id="model2">

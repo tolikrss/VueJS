@@ -1,0 +1,16 @@
+.router {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+body {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}

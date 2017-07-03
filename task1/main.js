@@ -1,3 +1,6 @@
+// var Vue = require('vue'); // --> import Vue from 'vue';
+// var MediaQueries = require('vue-media-wueries'); // --> import {MediaQueries} from 'vue-media-queries';
+
 // var childComponent1 = {
 //     template: '#model1',
 //     data: function() {
@@ -34,12 +37,11 @@
 //         }
 //     }
 // }
-
 var childComponent1 = {
     template: '#model1',
     data: function() {
         return {
-
+            isShow: true
         }
     },
     props: ['expirience', 'languages', 'educations'],
@@ -65,6 +67,9 @@ var childComponent1 = {
             this.expirience = '<1';
             this.educations = ['Student'];
             this.languages = ['EN'];
+        },
+        show() {
+            this.isShow = !this.isShow;
         }
     }
 }

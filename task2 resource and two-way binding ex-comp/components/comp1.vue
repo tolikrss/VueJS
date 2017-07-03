@@ -4,9 +4,9 @@
     <input v-model="message"></input>
     <ul class="comp1__list">
         <li v-for="film in films">
-            <!--
+            
             <img v-bind:src="film.Poster">
-            -->
+            
             <div>
                 <div>{{film.Title}}</div>
                 <div>{{film.Type}}</div>
@@ -39,7 +39,7 @@ module.exports = {
                     params: {
                         apikey: 'ff8acd7c',
                         y: 2017,
-                        s: 'f'
+                        s: 'dark'
                     }
                 }
                 this.$http.get(this.filmsLink, options).then(function(response) {

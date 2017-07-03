@@ -19,6 +19,17 @@ body {
     border-radius: 10px;
     background-color: #f00;
     margin: 10px;
+    border-style: none;
+}
+
+#Show {
+    border: none;
+    cursor: pointer;
+    width: 140px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #aaa;
+    margin: 10px;
 }
 
 fieldset {
@@ -68,6 +79,15 @@ fieldset {
     background: #eee;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
     color: black;
+}
+
+@media (max-width:680px) {
+    .model1 {
+        width: 50%;
+    }
+    .model2 {
+        width: 50%;
+    }
 }
 
 .model2 {

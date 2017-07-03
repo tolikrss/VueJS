@@ -10,8 +10,8 @@
 6 silly lifecycle vue-resource-tutorial@~prebuild: no script for prebuild, continuing
 7 info lifecycle vue-resource-tutorial@~build: vue-resource-tutorial@
 8 verbose lifecycle vue-resource-tutorial@~build: unsafe-perm in lifecycle true
-9 verbose lifecycle vue-resource-tutorial@~build: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;D:\VueJS\node_modules\.bin;C:\Users\PC-417489\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\mingw64\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\local\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\mingw64\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin;C:\Users\PC-417489\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Skype\Phone;C:\Program Files\nodejs;C:\Users\PC-417489\AppData\Local\Microsoft\WindowsApps;C:\Users\PC-417489\AppData\Local\Programs\Git\cmd;C:\Users\PC-417489\AppData\Roaming\npm;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin\core_perl
-10 verbose lifecycle vue-resource-tutorial@~build: CWD: D:\VueJS
+9 verbose lifecycle vue-resource-tutorial@~build: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;D:\Vue\VueJS 13 vue-resource (requests)\node_modules\.bin;C:\Users\PC-417489\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\mingw64\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\local\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\mingw64\bin;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin;C:\Users\PC-417489\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Skype\Phone;C:\Program Files\nodejs;C:\Users\PC-417489\AppData\Local\Microsoft\WindowsApps;C:\Users\PC-417489\AppData\Local\Programs\Git\cmd;C:\Users\PC-417489\AppData\Roaming\npm;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\PC-417489\AppData\Local\Programs\Git\usr\bin\core_perl
+10 verbose lifecycle vue-resource-tutorial@~build: CWD: D:\Vue\VueJS 13 vue-resource (requests)
 11 silly lifecycle vue-resource-tutorial@~build: Args: [ '/d /s /c', 'cross-env NODE_ENV=production webpack' ]
 12 silly lifecycle vue-resource-tutorial@~build: Returned: code: 1  signal: null
 13 info lifecycle vue-resource-tutorial@~build: Failed to exec build script
@@ -26,7 +26,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:891:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid vue-resource-tutorial@
-16 verbose cwd D:\VueJS
+16 verbose cwd D:\Vue\VueJS 13 vue-resource (requests)
 17 error Windows_NT 10.0.14393
 18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "build"
 19 error node v6.11.0
